@@ -1,6 +1,6 @@
 # Android-Dialogs-Interface
 
-dialog interface for android
+recommended uniform dialog interface for android
 
 ## Usage
 
