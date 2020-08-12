@@ -1,6 +1,7 @@
 package tiiehenry.android.ui.dialogs.api.strategy.loading;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.StringRes;
 
 public interface IDialogLoading<T> {
     /**
@@ -12,6 +13,8 @@ public interface IDialogLoading<T> {
     T minDisplayTime(long delay);
 
     T addLoadingTask(@NonNull CharSequence text, @NonNull ILoadingTask task);
+
+    T addLoadingTask(@StringRes int text, @NonNull ILoadingTask task);
 
     /**
      * execute loading task after show

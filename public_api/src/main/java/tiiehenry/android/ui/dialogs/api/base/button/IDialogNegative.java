@@ -3,16 +3,16 @@ package tiiehenry.android.ui.dialogs.api.base.button;
 import androidx.annotation.NonNull;
 import androidx.annotation.StringRes;
 
+import tiiehenry.android.ui.dialogs.api.IDialog;
 import tiiehenry.android.ui.dialogs.api.callback.SingleButtonCallback;
+import tiiehenry.android.ui.dialogs.api.callback.button.OnNegativeCallback;
 
 public interface IDialogNegative<T> {
 
     T negativeText(@StringRes int textRes);
 
     default T negativeText() {
-        onNegative((dialog, which) -> {
-            dialog.dismiss();
-        });
+        onNegative(IDialog::dismiss);
         return negativeText(android.R.string.cancel);
     }
 
@@ -32,6 +32,6 @@ public interface IDialogNegative<T> {
      * @param callback
      * @return
      */
-    T onNegative(@NonNull SingleButtonCallback callback);
+    T onNegative(@NonNull OnNegativeCallback callback);
 
 }

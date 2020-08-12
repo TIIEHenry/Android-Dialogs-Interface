@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.StringRes;
 
 import tiiehenry.android.ui.dialogs.api.callback.SingleButtonCallback;
+import tiiehenry.android.ui.dialogs.api.callback.button.OnNeutralCallback;
 
 public interface IDialogNeutral<T> {
 
@@ -33,5 +34,5 @@ public interface IDialogNeutral<T> {
      * @param callback
      * @return
      */
-    T onNeutral(@NonNull SingleButtonCallback callback);
+    T onNeutral(@NonNull OnNeutralCallback callback);
 }

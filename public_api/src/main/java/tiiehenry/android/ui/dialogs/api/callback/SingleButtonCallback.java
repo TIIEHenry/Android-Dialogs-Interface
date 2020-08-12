@@ -4,9 +4,12 @@ import androidx.annotation.NonNull;
 
 import tiiehenry.android.ui.dialogs.api.DialogAction;
 import tiiehenry.android.ui.dialogs.api.IDialog;
+import tiiehenry.android.ui.dialogs.api.callback.button.OnNegativeCallback;
+import tiiehenry.android.ui.dialogs.api.callback.button.OnNeutralCallback;
+import tiiehenry.android.ui.dialogs.api.callback.button.OnPositiveCallback;
 
 
-public interface SingleButtonCallback {
+public interface SingleButtonCallback extends OnPositiveCallback, OnNegativeCallback, OnNeutralCallback {
 
     default void onPositive(@NonNull IDialog dialog) {
         onClick(dialog, DialogAction.POSITIVE);

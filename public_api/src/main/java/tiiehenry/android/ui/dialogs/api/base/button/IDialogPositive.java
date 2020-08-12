@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.StringRes;
 
 import tiiehenry.android.ui.dialogs.api.callback.SingleButtonCallback;
+import tiiehenry.android.ui.dialogs.api.callback.button.OnPositiveCallback;
 
 
 public interface IDialogPositive<T> {
@@ -37,5 +38,5 @@ public interface IDialogPositive<T> {
      * @param callback
      * @return
      */
-    T onPositive(@NonNull SingleButtonCallback callback);
+    T onPositive(@NonNull OnPositiveCallback callback);
 }
