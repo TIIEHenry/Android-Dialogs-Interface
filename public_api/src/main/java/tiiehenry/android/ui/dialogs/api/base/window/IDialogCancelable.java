@@ -11,7 +11,7 @@ interface IDialogCancelable<T> {
      */
     T cancelable(boolean cancelable);
 
-    T canceledOnTouchOutside(boolean canceledOnTouchOutside);
+    T cancelOnTouchOutside(boolean cancelable);
 
 
 }

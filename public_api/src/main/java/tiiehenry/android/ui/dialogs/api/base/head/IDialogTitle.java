@@ -17,12 +17,12 @@ public interface IDialogTitle<T> {
      * @return
      */
     T title(@NonNull CharSequence title);
-
-    /**
-     * 设置标题的对齐方式
-     *
-     * @param gravity
-     * @return
-     */
-    T titleGravity(@NonNull GravityEnum gravity);
+//
+//    /**
+//     * 设置标题的对齐方式
+//     *
+//     * @param gravity
+//     * @return
+//     */
+//    T titleGravity(@NonNull GravityEnum gravity);
 }

@@ -41,22 +41,22 @@ public interface IDialogInput<T> extends IBaseDialogBuilder<T> {
             @IntRange(from = 0, to = Integer.MAX_VALUE) int minLength,
             @IntRange(from = -1, to = Integer.MAX_VALUE) int maxLength);
 
-    /**
-     * @param errorColor Pass in 0 for the default red error color (as specified in guidelines).
-     */
-    T inputRange(
-            @IntRange(from = 0, to = Integer.MAX_VALUE) int minLength,
-            @IntRange(from = -1, to = Integer.MAX_VALUE) int maxLength,
-            @ColorInt int errorColor);
+//    /**
+//     * @param errorColor Pass in 0 for the default red error color (as specified in guidelines).
+//     */
+//    T inputRange(
+//            @IntRange(from = 0, to = Integer.MAX_VALUE) int minLength,
+//            @IntRange(from = -1, to = Integer.MAX_VALUE) int maxLength,
+//            @ColorInt int errorColor);
 
     /**
      * Same as #{@link #inputRange(int, int, int)}, but it takes a color resource ID for the error
      * color.
      */
-    T inputRangeRes(
-            @IntRange(from = 0, to = Integer.MAX_VALUE) int minLength,
-            @IntRange(from = -1, to = Integer.MAX_VALUE) int maxLength,
-            @ColorRes int errorColor);
+//    T inputRangeRes(
+//            @IntRange(from = 0, to = Integer.MAX_VALUE) int minLength,
+//            @IntRange(from = -1, to = Integer.MAX_VALUE) int maxLength,
+//            @ColorRes int errorColor);
 
     T alwaysCallInputCallback(boolean isCall);
 }

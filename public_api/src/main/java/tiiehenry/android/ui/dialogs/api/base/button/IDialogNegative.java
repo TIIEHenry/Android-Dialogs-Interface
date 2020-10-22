@@ -4,8 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.StringRes;
 
 import tiiehenry.android.ui.dialogs.api.IDialog;
-import tiiehenry.android.ui.dialogs.api.callback.SingleButtonCallback;
-import tiiehenry.android.ui.dialogs.api.callback.button.OnNegativeCallback;
+import tiiehenry.android.ui.dialogs.api.callback.button.ButtonCallback;
 
 public interface IDialogNegative<T> {
 
@@ -24,7 +23,7 @@ public interface IDialogNegative<T> {
      */
     T negativeText(@NonNull CharSequence text);
 
-    T negativeFocus(boolean isFocusedDefault);
+//    T negativeFocus(boolean isFocusedDefault);
 
     /**
      * 设置否定按钮的点击回调
@@ -32,6 +31,6 @@ public interface IDialogNegative<T> {
      * @param callback
      * @return
      */
-    T onNegative(@NonNull OnNegativeCallback callback);
+    T onNegative(@NonNull ButtonCallback callback);
 
 }

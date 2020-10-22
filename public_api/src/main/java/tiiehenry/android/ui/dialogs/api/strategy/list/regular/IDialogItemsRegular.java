@@ -14,12 +14,12 @@ public interface IDialogItemsRegular<T> extends IDialogBaseItems<T> {
      * @return
      */
     T itemsCallback(@NonNull ListCallback callback);
-
-    /**
-     * 设置对话框列表的长按点击回调
-     *
-     * @param callback
-     * @return
-     */
-    T itemsLongCallback(@NonNull ListLongCallback callback);
+//
+//    /**
+//     * 设置对话框列表的长按点击回调
+//     *
+//     * @param callback
+//     * @return
+//     */
+//    T itemsLongCallback(@NonNull ListLongCallback callback);
 }

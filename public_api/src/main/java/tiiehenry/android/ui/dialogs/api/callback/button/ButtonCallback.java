@@ -4,6 +4,6 @@ import androidx.annotation.NonNull;
 
 import tiiehenry.android.ui.dialogs.api.IDialog;
 
-public interface OnPositiveCallback {
-    void onPositive(@NonNull IDialog dialog);
+public interface ButtonCallback {
+    void onClick(@NonNull IDialog dialog);
 }

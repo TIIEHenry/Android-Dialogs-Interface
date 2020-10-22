@@ -18,7 +18,7 @@ public interface IDialogIcon<T> {
 
     T iconRes(@DrawableRes int iconRes);
 
-    T iconAttr(@AttrRes int iconAttr);
+//    T iconAttr(@AttrRes int iconAttr);
 
     /**
      * Limits the display size of a set icon to 40dp.

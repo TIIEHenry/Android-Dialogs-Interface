@@ -13,9 +13,9 @@ public interface ListCallbackMultiChoice {
      * used.
      *
      * @param dialog The dialog of which a list item was selected.
-     * @param which  The indices of the items that were selected.
-     * @param text   The text of the items that were selected.
+     * @param indices  The indices of the items that were selected.
+     * @param items   The text of the items that were selected.
      * @return True to allow the checkbox to be selected.
      */
-    boolean onSelection(IDialog dialog, Integer[] which, CharSequence[] text);
+    boolean onSelection(IDialog dialog, int[] indices, CharSequence[] items);
 }

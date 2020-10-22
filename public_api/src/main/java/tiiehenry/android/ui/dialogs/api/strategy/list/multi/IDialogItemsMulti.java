@@ -8,17 +8,9 @@ import androidx.annotation.StringRes;
 
 import tiiehenry.android.ui.dialogs.api.base.content.IDialogBaseItems;
 import tiiehenry.android.ui.dialogs.api.callback.ListCallbackMultiChoice;
+import tiiehenry.android.ui.dialogs.api.callback.OnCheckedChangeListener;
 
 public interface IDialogItemsMulti<T> extends IDialogBaseItems<T> {
-    T checkBoxPrompt(
-            @NonNull CharSequence prompt,
-            boolean initiallyChecked,
-            @Nullable CheckBox.OnCheckedChangeListener checkListener);
-
-    T checkBoxPromptRes(
-            @StringRes int prompt,
-            boolean initiallyChecked,
-            @Nullable CheckBox.OnCheckedChangeListener checkListener);
 
     /**
      * 设置对话框列表多选监听
@@ -30,7 +22,7 @@ public interface IDialogItemsMulti<T> extends IDialogBaseItems<T> {
      * @return The Builder instance so you can chain calls to it.
      */
     T itemsCallbackMultiChoice(
-            @Nullable Integer[] selectedIndices, @NonNull ListCallbackMultiChoice callback);
+            @Nullable int[] selectedIndices, @NonNull ListCallbackMultiChoice callback);
 
 
     /**

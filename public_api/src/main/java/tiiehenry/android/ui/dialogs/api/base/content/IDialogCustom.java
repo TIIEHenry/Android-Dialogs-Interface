@@ -13,16 +13,16 @@ public interface IDialogCustom<T> {
      * 设置对话框自定义布局
      *
      * @param layoutRes
-     * @param wrapInScrollView
+     * @param dialogWrapContent
      * @param onViewCreatedCallback call after inflate view
      * @return
      */
-    T customView(@LayoutRes int layoutRes, boolean wrapInScrollView, @Nullable OnViewCreatedCallback onViewCreatedCallback);
+    T customView(@LayoutRes int layoutRes, boolean dialogWrapContent, @Nullable OnViewCreatedCallback onViewCreatedCallback);
 
-    default T customView(@LayoutRes int layoutRes, boolean wrapInScrollView) {
-        return customView(layoutRes, wrapInScrollView, null);
+    default T customView(@LayoutRes int layoutRes, boolean dialogWrapContent) {
+        return customView(layoutRes, dialogWrapContent, null);
     }
 
-    T customView(@NonNull View view, boolean wrapInScrollView);
+    T customView(@NonNull View view, boolean dialogWrapContent);
 
 }

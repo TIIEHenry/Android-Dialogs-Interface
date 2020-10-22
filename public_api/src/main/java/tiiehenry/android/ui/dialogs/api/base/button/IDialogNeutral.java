@@ -3,8 +3,7 @@ package tiiehenry.android.ui.dialogs.api.base.button;
 import androidx.annotation.NonNull;
 import androidx.annotation.StringRes;
 
-import tiiehenry.android.ui.dialogs.api.callback.SingleButtonCallback;
-import tiiehenry.android.ui.dialogs.api.callback.button.OnNeutralCallback;
+import tiiehenry.android.ui.dialogs.api.callback.button.ButtonCallback;
 
 public interface IDialogNeutral<T> {
 
@@ -26,7 +25,7 @@ public interface IDialogNeutral<T> {
     T neutralText(@NonNull CharSequence text);
 
 
-    T neutralFocus(boolean isFocusedDefault);
+//    T neutralFocus(boolean isFocusedDefault);
 
     /**
      * 设置中性按钮的点击回调
@@ -34,5 +33,5 @@ public interface IDialogNeutral<T> {
      * @param callback
      * @return
      */
-    T onNeutral(@NonNull OnNeutralCallback callback);
+    T onNeutral(@NonNull ButtonCallback callback);
 }

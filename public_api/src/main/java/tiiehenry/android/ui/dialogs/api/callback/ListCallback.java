@@ -1,7 +1,5 @@
 package tiiehenry.android.ui.dialogs.api.callback;
 
-import android.view.View;
-
 import tiiehenry.android.ui.dialogs.api.IDialog;
 
 /**
@@ -9,5 +7,5 @@ import tiiehenry.android.ui.dialogs.api.IDialog;
  */
 public interface ListCallback {
 
-    void onSelection(IDialog dialog, View itemView, int position, CharSequence text);
+    void onSelection(IDialog dialog, int position, String text);
 }

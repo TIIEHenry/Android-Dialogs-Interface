@@ -14,7 +14,7 @@ public interface IDialogContent<T> {
      */
     T content(@StringRes int contentRes);
 
-    T content(@StringRes int contentRes, boolean html);
+//    T content(@StringRes int contentRes, boolean html);
 
     /**
      * 设置对话框的内容
@@ -25,6 +25,6 @@ public interface IDialogContent<T> {
     T content(@NonNull CharSequence content);
 
 
-    T content(@StringRes int contentRes, Object... formatArgs);
+//    T content(@StringRes int contentRes, Object... formatArgs);
 
 }

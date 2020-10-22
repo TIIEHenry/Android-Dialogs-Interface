@@ -10,6 +10,7 @@ public interface IDialogItemsSingle<T> extends IDialogBaseItems<T> {
 
     /**
      * 设置对话框列表单选监听
+     * 总是会触发，无需设置其他事件
      * Pass anything below 0 (such as -1) for the selected index to leave all options unselected
      * initially. Otherwise pass the index of an item that will be selected initially.
      *

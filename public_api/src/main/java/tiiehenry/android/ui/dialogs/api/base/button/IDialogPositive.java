@@ -3,8 +3,7 @@ package tiiehenry.android.ui.dialogs.api.base.button;
 import androidx.annotation.NonNull;
 import androidx.annotation.StringRes;
 
-import tiiehenry.android.ui.dialogs.api.callback.SingleButtonCallback;
-import tiiehenry.android.ui.dialogs.api.callback.button.OnPositiveCallback;
+import tiiehenry.android.ui.dialogs.api.callback.button.ButtonCallback;
 
 
 public interface IDialogPositive<T> {
@@ -29,7 +28,7 @@ public interface IDialogPositive<T> {
      */
     T positiveText(@NonNull CharSequence text);
 
-    T positiveFocus(boolean isFocusedDefault);
+//    T positiveFocus(boolean isFocusedDefault);
 
 
     /**
@@ -38,5 +37,5 @@ public interface IDialogPositive<T> {
      * @param callback
      * @return
      */
-    T onPositive(@NonNull OnPositiveCallback callback);
+    T onPositive(@NonNull ButtonCallback callback);
 }

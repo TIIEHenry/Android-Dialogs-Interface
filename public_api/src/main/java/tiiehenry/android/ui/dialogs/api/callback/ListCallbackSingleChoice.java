@@ -1,7 +1,5 @@
 package tiiehenry.android.ui.dialogs.api.callback;
 
-import android.view.View;
-
 import tiiehenry.android.ui.dialogs.api.IDialog;
 
 /**
@@ -18,5 +16,5 @@ public interface ListCallbackSingleChoice {
      * @param text   The text of the item that was selected.
      * @return True to allow the radio button to be selected.
      */
-    boolean onSelection(IDialog dialog, View itemView, int which, CharSequence text);
+    boolean onSelection(IDialog dialog, int which, CharSequence text);
 }
