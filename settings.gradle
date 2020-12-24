@@ -1,5 +1,6 @@
 rootProject.name = "Android-Dialogs-Interface"
 include ':public_api'
+include ':wrapped_md_dialogs'
 //include ':app'
 
 rootProject.children.each {
