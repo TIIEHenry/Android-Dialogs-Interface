@@ -7,15 +7,15 @@ import tiiehenry.android.ui.dialogs.api.base.content.IDialogBaseItems
 interface MaterialBaseListDialogBuilder<T> : MaterialBaseDialogBuilder<T>, IDialogBaseItems<T> {
     val listTemp: ListTemp
 
-    override fun itemsIds(idsArray: IntArray): T {
+    override fun items(idsArray: IntArray): T {
         listTemp.itemsIds = idsArray
         return builder()
     }
 
-    override fun itemsIds(idsArrayRes: Int): T {
+/*    override fun itemsIds(idsArrayRes: Int): T {
         listTemp.itemsIdsRes = idsArrayRes
         return builder()
-    }
+    }*/
 //md_item_selector
 //    override fun listSelector(selectorRes: Int): T {
 //        builder.getItemSelector()

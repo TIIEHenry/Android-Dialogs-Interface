@@ -2,7 +2,6 @@ package tiiehenry.android.ui.dialogs.mddialogs.loading
 
 import android.view.View
 import android.widget.TextView
-import org.jetbrains.anko.doAsync
 import tiiehenry.android.ui.dialogs.mddialogs.base.MaterialDialogBaseWrapper
 import tiiehenry.android.ui.dialogs.api.strategy.loading.ILoadingDialog
 import tiiehenry.android.ui.dialogs.api.strategy.loading.OnLoadingException
@@ -21,20 +20,22 @@ class MaterialLoadingDialogWrapper(builder: MDLoadingDialogBuilder, val layout: 
 
     override fun executeLoadingTask() {
         try {
-            doAsync {
-                val oldTime = System.currentTimeMillis()
-                for (taskItem in loadTemp.loadingTaskList) {
-                    setLoadingText(taskItem.first)
+            object:Thread(){
+                override fun run() {
+                    val oldTime = System.currentTimeMillis()
+                    for (taskItem in loadTemp.loadingTaskList) {
+                        setLoadingText(taskItem.first)
 //                    Thread.sleep(10000)
-                    taskItem.second.onLoading(this@MaterialLoadingDialogWrapper)
-                }
-                val newTime = System.currentTimeMillis()
+                        taskItem.second.onLoading(this@MaterialLoadingDialogWrapper)
+                    }
+                    val newTime = System.currentTimeMillis()
 //                loge((builder._minDisplayTime - (newTime - oldTime)).toString())
-                Thread.sleep(max(loadTemp.minDisplayTime - (newTime - oldTime), 0))
-                if (loadTemp.autoDismiss) {
-                    dialog.dismiss()
+                    Thread.sleep(max(loadTemp.minDisplayTime - (newTime - oldTime), 0))
+                    if (loadTemp.autoDismiss) {
+                        dialog.dismiss()
+                    }
                 }
-            }
+            }.start()
         } catch (e: OnLoadingException) {
             setLoadingText(e.message)
             dialog.cancelable(true)

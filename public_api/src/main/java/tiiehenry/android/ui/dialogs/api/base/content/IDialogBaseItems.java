@@ -1,14 +1,10 @@
 package tiiehenry.android.ui.dialogs.api.base.content;
 
 import androidx.annotation.ArrayRes;
-import androidx.annotation.DrawableRes;
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 
 import java.util.Collection;
 import java.util.List;
-
-import tiiehenry.android.ui.dialogs.api.GravityEnum;
 
 
 public interface IDialogBaseItems<T> {
@@ -23,16 +19,21 @@ public interface IDialogBaseItems<T> {
 
     T items(@NonNull List<CharSequence> itemCollection);
 
-    T items(@ArrayRes int itemsRes);
-
     T items(@NonNull CharSequence... items);
+
+    T items(@ArrayRes int itemsRes);
 
 
 //    T itemsGravity(@NonNull GravityEnum gravity);
 
-    T itemsIds(@NonNull int[] idsArray);
+    /**
+     * R.string.xxx,R.string.xxx
+     * @param idsArray int[]{R.string.xxx,R.string.xxx}
+     * @return
+     */
+    T items(@NonNull int[] idsArray);
 
-    T itemsIds(@ArrayRes int idsArrayRes);
+//    T itemsIds(@ArrayRes int idsArrayRes);
 
     /**
      * Sets indices of items that are not clickable. If they are checkboxes or radio buttons, they

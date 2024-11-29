@@ -9,7 +9,8 @@ import tiiehenry.android.ui.dialogs.api.callback.InputCallback
 import tiiehenry.android.ui.dialogs.api.strategy.input.IInputDialog
 import tiiehenry.android.ui.dialogs.api.strategy.input.IInputDialogBuilder
 
-class MDInputDialogBuilder(val context: Context) : MaterialBaseDialogBuilder<IInputDialogBuilder>, IInputDialogBuilder {
+class MDInputDialogBuilder(val context: Context) : MaterialBaseDialogBuilder<IInputDialogBuilder>,
+    IInputDialogBuilder {
     override val builder: MaterialDialog = MaterialDialog(context)
     override lateinit var dialog: IDialog
 
@@ -35,7 +36,11 @@ class MDInputDialogBuilder(val context: Context) : MaterialBaseDialogBuilder<IIn
         return builder()
     }
 
-    override fun input(hint: CharSequence?, preFill: CharSequence?, callback: InputCallback): IInputDialogBuilder {
+    override fun input(
+        hint: CharSequence?,
+        preFill: CharSequence?,
+        callback: InputCallback
+    ): IInputDialogBuilder {
         inputTemp.hint = hint
         inputTemp.preFill = preFill
         inputTemp.callback = callback
@@ -78,12 +83,12 @@ class MDInputDialogBuilder(val context: Context) : MaterialBaseDialogBuilder<IIn
         negativeTemp.apply(builder, dialog)
         neutralTemp.apply(builder, dialog)
         builder.input(
-                hint = inputTemp.hint.toString(),
-                prefill = inputTemp.preFill,
-                inputType = inputTemp.inputType,
-                maxLength = inputTemp.inputRange?.second,
-                waitForPositiveButton = !inputTemp.alwaysCallInputCallback,
-                allowEmpty = inputTemp.inputRange?.first ?: 0 == 0
+            hint = inputTemp.hint.toString(),
+            prefill = inputTemp.preFill,
+            inputType = inputTemp.inputType,
+            maxLength = inputTemp.inputRange?.second,
+            waitForPositiveButton = !inputTemp.alwaysCallInputCallback,
+            allowEmpty = inputTemp.allowEmptyInput ?: ((inputTemp.inputRange?.first ?: 0) == 0)
         ) { materialDialog, charSequence ->
             inputTemp.callback?.onInput(inputDialog, charSequence)
         }

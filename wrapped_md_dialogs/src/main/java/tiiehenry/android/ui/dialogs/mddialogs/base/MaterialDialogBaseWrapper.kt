@@ -4,6 +4,7 @@ import com.afollestad.materialdialogs.MaterialDialog
 import tiiehenry.android.ui.dialogs.api.IDialog
 import tiiehenry.android.ui.dialogs.mddialogs.runOnUIThread
 import tiiehenry.android.ui.dialogs.mddialogs.showInAnim
+import kotlin.coroutines.CoroutineContext
 
 open class MaterialDialogBaseWrapper(val dialog: MaterialDialog) : IDialog {
     override fun dismiss() {

@@ -1,14 +1,15 @@
 apply plugin: 'com.android.library'
 
+//apply plugin: 'kotlin-android'
 group "tiiehenry.android.ui.dialogs"
 version "1.2"
 
 android {
-    compileSdkVersion 29
+    compileSdkVersion 31
 
     defaultConfig {
         minSdkVersion 21
-        targetSdkVersion 29
+        targetSdkVersion 31
         versionCode 1
         versionName "1.0"
 
@@ -31,9 +32,10 @@ android {
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
 
-    implementation 'androidx.annotation:annotation:1.1.0'
-    compileOnly 'androidx.recyclerview:recyclerview:1.1.0'
+    implementation 'androidx.annotation:annotation:1.4.0'
+    compileOnly 'androidx.recyclerview:recyclerview:1.2.1'
 
+//    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.1'
 }
 
 
