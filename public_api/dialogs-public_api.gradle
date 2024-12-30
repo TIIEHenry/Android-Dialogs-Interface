@@ -5,11 +5,12 @@ group "tiiehenry.android.ui.dialogs"
 version "1.2"
 
 android {
-    compileSdkVersion 31
+    namespace"tiiehenry.android.ui.dialogs.api"
+    compileSdkVersion=35
 
     defaultConfig {
-        minSdkVersion 21
-        targetSdkVersion 31
+        minSdkVersion 27
+        targetSdkVersion 35
         versionCode 1
         versionName "1.0"
 
@@ -32,8 +33,8 @@ android {
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
 
-    implementation 'androidx.annotation:annotation:1.4.0'
-    compileOnly 'androidx.recyclerview:recyclerview:1.2.1'
+    implementation 'androidx.annotation:annotation:1.9.1'
+    compileOnly 'androidx.recyclerview:recyclerview:1.3.2'
 
 //    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.1'
 }
